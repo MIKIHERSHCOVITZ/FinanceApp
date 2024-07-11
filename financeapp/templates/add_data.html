@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Financial Data</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #e0f7fa;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            width: 90%;
+            margin: auto;
+            overflow: hidden;
+            padding: 20px;
+        }
+        header {
+            background: #00796b;
+            color: #fff;
+            padding-top: 20px;
+            min-height: 70px;
+            border-bottom: #004d40 3px solid;
+        }
+        header a {
+            color: #fff;
+            text-decoration: none;
+            text-transform: uppercase;
+            font-size: 16px;
+        }
+        header ul {
+            padding: 0;
+            list-style: none;
+        }
+        header li {
+            float: left;
+            display: inline;
+            padding: 0 20px 0 20px;
+        }
+        header #branding {
+            float: left;
+        }
+        header #branding h1 {
+            margin: 0;
+        }
+        header nav {
+            float: right;
+            margin-top: 10px;
+        }
+        .content {
+            background: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            margin-top: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h2 {
+            color: #00796b;
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+        form label {
+            margin-top: 10px;
+        }
+        form input {
+            padding: 10px;
+            margin-top: 5px;
+        }
+        .buttons {
+            text-align: center;
+            margin-top: 20px;
+        }
+        .buttons button {
+            background: #00796b;
+            color: #fff;
+            border: 0;
+            padding: 10px 20px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        .buttons button:hover {
+            background: #004d40;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div id="branding">
+                <h1>Add Financial Data</h1>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="/dashboard">Dashboard</a></li>
+                    <li><a href="/view_data">View Data</a></li>
+                    <li><a href="/logout">Logout</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <div class="container">
+        <div class="content">
+            <h2>Add Financial Data</h2>
+            <form action="/add_data" method="post">
+                <label for="insurance">Insurance:</label>
+                <input type="text" id="insurance" name="insurance" required>
+
+                <label for="pension">Pension:</label>
+                <input type="text" id="pension" name="pension" required>
+
+                <label for="bank_balance">Bank Balance:</label>
+                <input type="text" id="bank_balance" name="bank_balance" required>
+
+                <label for="loan">Loan:</label>
+                <input type="text" id="loan" name="loan" required>
+
+                <label for="credit_card">Credit Card:</label>
+                <input type="text" id="credit_card" name="credit_card" required>
+
+                <label for="salary">Salary:</label>
+                <input type="text" id="salary" name="salary" required>
+
+                <label for="savings">Savings:</label>
+                <input type="text" id="savings" name="savings" required>
+
+                <label for="investments">Investments:</label>
+                <input type="text" id="investments" name="investments" required>
+
+                <div class="buttons">
+                    <button type="submit">Add Data</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            width: 80%;
+            margin: auto;
+            overflow: hidden;
+            padding: 20px;
+        }
+        header {
+            background: #333;
+            color: #fff;
+            padding-top: 30px;
+            min-height: 70px;
+            border-bottom: #0779e4 3px solid;
+        }
+        header a {
+            color: #fff;
+            text-decoration: none;
+            text-transform: uppercase;
+            font-size: 16px;
+        }
+        header ul {
+            padding: 0;
+            list-style: none;
+        }
+        header li {
+            float: left;
+            display: inline;
+            padding: 0 20px 0 20px;
+        }
+        header #branding {
+            float: left;
+        }
+        header #branding h1 {
+            margin: 0;
+        }
+        header nav {
+            float: right;
+            margin-top: 10px;
+        }
+        form {
+            background: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            margin-top: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        form div {
+            margin-bottom: 15px;
+            clear: both;
+        }
+        form div label {
+            float: left;
+            width: 30%;
+            font-weight: bold;
+        }
+        form div input, form div select {
+            float: right;
+            width: 65%;
+            padding: 5px;
+        }
+        form button {
+            background: #333;
+            color: #fff;
+            border: 0;
+            padding: 10px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        form button:hover {
+            background: #0779e4;
+        }
+        .buttons {
+            text-align: center;
+            margin-top: 20px;
+        }
+        .buttons a, .buttons button {
+            background: #333;
+            color: #fff;
+            border: 0;
+            padding: 10px 20px;
+            cursor: pointer;
+            border-radius: 5px;
+            text-decoration: none;
+        }
+        .buttons a:hover, .buttons button:hover {
+            background: #0779e4;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div id="branding">
+                <h1>Dashboard</h1>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="/dashboard">Home</a></li>
+                    <li><a href="/view_data">View Data</a></li>
+                    <li><a href="/logout">Logout</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <div class="container">
+        <h2>Add Financial Data</h2>
+        <form action="/add_data" method="post">
+            <div>
+                <label for="insurance">Insurance:</label>
+                <input type="number" id="insurance" name="insurance" step="0.01" required>
+            </div>
+            <div>
+                <label for="pension">Pension:</label>
+                <input type="number" id="pension" name="pension" step="0.01" required>
+            </div>
+            <div>
+                <label for="bank_balance">Bank Balance:</label>
+                <input type="number" id="bank_balance" name="bank_balance" step="0.01" required>
+            </div>
+            <div>
+                <label for="loan">Loan:</label>
+                <input type="number" id="loan" name="loan" step="0.01" required>
+            </div>
+            <div>
+                <label for="credit_card">Credit Card:</label>
+                <input type="number" id="credit_card" name="credit_card" step="0.01" required>
+            </div>
+            <div>
+                <label for="salary">Salary:</label>
+                <input type="number" id="salary" name="salary" step="0.01" required>
+            </div>
+            <div>
+                <label for="savings">Savings:</label>
+                <input type="number" id="savings" name="savings" step="0.01" required>
+            </div>
+            <div>
+                <label for="investments">Investments:</label>
+                <input type="number" id="investments" name="investments" step="0.01" required>
+            </div>
+            <button type="submit">Add Data</button>
+        </form>
+        <div class="buttons">
+            <a href="/view_data">View Data</a>
+        </div>
+    </div>
+</body>
+</html>
